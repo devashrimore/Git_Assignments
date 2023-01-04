@@ -1,0 +1,104 @@
+devamore@INLEN8520051089 MINGW64 ~
+$ mkdir Assignments
+
+devamore@INLEN8520051089 MINGW64 ~
+$ cd Assignments
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments
+$ init Assignments
+bash: init: command not found
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments
+$ git init
+Initialized empty Git repository in C:/Users/DEVAMORE/Assignments/.git/
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ touch README.txt
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git add .
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git commit -m "README.txt is commited"
+[master (root-commit) c5ee509] README.txt is commited
+ 1 file changed, 4 insertions(+)
+ create mode 100644 README.txt
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git checkout html_assignments
+error: pathspec 'html_assignments' did not match any file(s) known to git
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git branch html_assignment
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git checkout html_assignment
+Switched to branch 'html_assignment'
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (html_assignment)
+$ git add *.html
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (html_assignment)
+$ git commit -m "First Commit in Branch"
+[html_assignment 4a31361] First Commit in Branch
+ 3 files changed, 21 insertions(+)
+ create mode 100644 Cat.html
+ create mode 100644 Dog.html
+ create mode 100644 Human.html
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (html_assignment)
+$ git add *.html
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (html_assignment)
+$ git commit -m "Second Commit in Branch"
+[html_assignment 0641258] Second Commit in Branch
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (html_assignment)
+$ git checkout master
+Switched to branch 'master'
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git add README.txt
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git commit -m "Second commit in master"
+[master 7fe6872] Second commit in master
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git checkout html_assignment
+Switched to branch 'html_assignment'
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (html_assignment)
+$ git add *.html
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (html_assignment)
+$ git commit -m "Third Commit in Branch"
+[html_assignment c4cc6be] Third Commit in Branch
+ 3 files changed, 6 insertions(+), 3 deletions(-)
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (html_assignment)
+$ git checkout master
+Switched to branch 'master'
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git merge master
+Already up to date.
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ status master
+bash: status: command not found
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vs/
+        ConsoleApp1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ Function Key 10

@@ -1,0 +1,161 @@
+
+devamore@INLEN8520051089 MINGW64 ~
+$ mkdir project_dir
+
+devamore@INLEN8520051089 MINGW64 ~
+$ cd project_dir
+
+devamore@INLEN8520051089 MINGW64 ~/project_dir
+$ git init
+Initialized empty Git repository in C:/Users/DEVAMORE/project_dir/.git/
+
+devamore@INLEN8520051089 MINGW64 ~/project_dir (master)
+$ touch index.html
+
+devamore@INLEN8520051089 MINGW64 ~/project_dir (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+devamore@INLEN8520051089 MINGW64 ~/project_dir (master)
+$ git add index.html
+
+devamore@INLEN8520051089 MINGW64 ~/project_dir (master)
+$ git commit -m "initial commit done"
+[master (root-commit) f069826] initial commit done
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+devamore@INLEN8520051089 MINGW64 ~/project_dir (master)
+$ touch info.txt
+
+devamore@INLEN8520051089 MINGW64 ~/project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+devamore@INLEN8520051089 MINGW64 ~/project_dir (master)
+$ touch .gitignore
+
+devamore@INLEN8520051089 MINGW64 ~/project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+devamore@INLEN8520051089 MINGW64 ~/project_dir (master)
+$ git add index.html
+
+devamore@INLEN8520051089 MINGW64 ~/project_dir (master)
+$ git commit -m "second commit is done"
+[master 3b0a2e3] second commit is done
+ 1 file changed, 4 insertions(+)
+
+devamore@INLEN8520051089 MINGW64 ~/project_dir (master)
+$ git log
+commit 3b0a2e335e8fd83fa59a076ee3a2033030465715 (HEAD -> master)
+Author: More <devashrimore111@gmail.com>
+Date:   Fri Dec 30 09:54:55 2022 +0530
+
+    second commit is done
+
+commit f069826d98ad0c0793834e857ae3ef8aeb7beee1
+Author: More <devashrimore111@gmail.com>
+Date:   Fri Dec 30 09:01:31 2022 +0530
+
+    initial commit done
+
+devamore@INLEN8520051089 MINGW64 ~/project_dir (master)
+$ git checkout -- index.html
+
+devamore@INLEN8520051089 MINGW64 ~/project_dir (master)
+$ git add index.html
+
+devamore@INLEN8520051089 MINGW64 ~/project_dir (master)
+$ git restore --staged index.html
+
+devamore@INLEN8520051089 MINGW64 ~/project_dir (master)
+$ git checkout -- index.html
+
+devamore@INLEN8520051089 MINGW64 ~/project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+devamore@INLEN8520051089 MINGW64 ~/project_dir (master)
+$ git add index.html
+
+devamore@INLEN8520051089 MINGW64 ~/project_dir (master)
+$ git commit -m "Html file is Commited"
+[master 1b1525b] Html file is Commited
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+devamore@INLEN8520051089 MINGW64 ~/project_dir (master)
+$ git log
+commit 1b1525bbb58547c0c839fa91768ca5a975c1f443 (HEAD -> master)
+Author: More <devashrimore111@gmail.com>
+Date:   Fri Dec 30 12:08:36 2022 +0530
+
+    Html file is Commited
+
+commit 3b0a2e335e8fd83fa59a076ee3a2033030465715
+Author: More <devashrimore111@gmail.com>
+Date:   Fri Dec 30 09:54:55 2022 +0530
+
+    second commit is done
+
+commit f069826d98ad0c0793834e857ae3ef8aeb7beee1
+Author: More <devashrimore111@gmail.com>
+Date:   Fri Dec 30 09:01:31 2022 +0530
+
+    initial commit done
+
+devamore@INLEN8520051089 MINGW64 ~/project_dir (master)
+$ git revert 1b1525bbb58547c0c839fa91768ca5a975c1f443
+[master 3b348e6] Revert "Html file is Commited"
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+devamore@INLEN8520051089 MINGW64 ~/project_dir (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+devamore@INLEN8520051089 MINGW64 ~/project_dir (master)
+$

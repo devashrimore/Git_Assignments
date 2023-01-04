@@ -1,0 +1,120 @@
+cd
+devamore@INLEN8520051089 MINGW64 ~
+$ cd Assignments
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git branch css-assignments
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git checkout css-assignments
+Switched to branch 'css-assignments'
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (css-assignments)
+$ git add *.css
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (css-assignments)
+$ git commit -m "First commit of branch"
+[css-assignments 94a56f3] First commit of branch
+ 2 files changed, 24 insertions(+)
+ create mode 100644 cat.css
+ create mode 100644 dog.css
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (css-assignments)
+$ git add README.txt
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (css-assignments)
+$ git status
+On branch css-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vs/
+        ConsoleApp1/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (css-assignments)
+$ git add README.txt
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (css-assignments)
+$ git commit -m "Commit readme"
+[css-assignments 8f4a45a] Commit readme
+ 1 file changed, 1 insertion(+)
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (css-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git add README.txt
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git commit -m "Commit readme"
+[master e1c6869] Commit readme
+ 1 file changed, 2 insertions(+)
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git checkout css-assignments
+Switched to branch 'css-assignments'
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (css-assignments)
+$ git add *.css
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (css-assignments)
+$ git commit -m "Commit ^C
+ss
+devamore@INLEN8520051089 MINGW64 ~/Assignments (css-assignments)
+$ git commit -m "Commit css files"
+[css-assignments c5121fa] Commit css files
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (css-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git merge css-assignments
+Auto-merging README.txt
+Merge made by the 'ort' strategy.
+ cat.css | 12 ++++++++++++
+ dog.css | 12 ++++++++++++
+ 2 files changed, 24 insertions(+)
+ create mode 100644 cat.css
+ create mode 100644 dog.css
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vs/
+        ConsoleApp1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ cat cat.css
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+
+<h1>This is cat</h1>
+
+
+</body>
+</html>
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git --delete css-assignment
+unknown option: --delete
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path

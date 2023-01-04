@@ -1,0 +1,155 @@
+devamore@INLEN8520051089 MINGW64 ~
+$ cd Assignments
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/DEVAMORE/Assignments/.git/
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git branch js-assignments
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git checkout js-assignment
+error: pathspec 'js-assignment' did not match any file(s) known to git
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git checkout js-assignments
+Switched to branch 'js-assignments'
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (js-assignments)
+$ git add crow.js
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (js-assignments)
+$ git add parrot.js
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (js-assignments)
+$ git commit -m "Files committed"
+[js-assignments a63b633] Files committed
+ 2 files changed, 21 insertions(+)
+ create mode 100644 crow.js
+ create mode 100644 parrot.js
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (js-assignments)
+$ git status
+On branch js-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vs/
+        ConsoleApp1/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (js-assignments)
+$ git add README.txt
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (js-assignments)
+$ git commit -m "README commited"
+[js-assignments 41cb8f8] README commited
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (js-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git add README.txt
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git commit -m "README commited"
+[master f38d665] README commited
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git checkout js-assignments
+Switched to branch 'js-assignments'
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (js-assignments)
+$ git add *.js
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (js-assignments)
+$ git commit -m "js commited"
+[js-assignments 48c27e2] js commited
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (js-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git merge js-assignments
+Auto-merging README.txt
+CONFLICT (content): Merge conflict in README.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master|MERGING)
+$ cat README.txt
+<<<<<<< HEAD
+Printing this:
+=======
+
+>>>>>>> js-assignments
+Assignments contains all the css,HTML ang Java Script files.
+.HTML
+it is very important topic
+.CSS
+.JS
+......changes Made
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master|MERGING)
+$ vim README.txt
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master|MERGING)
+$ cat README.txt
+
+Printing this:
+Assignments contains all the css,HTML ang Java Script files.
+.HTML
+it is very important topic
+.CSS
+.JS
+......changes Made
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master|MERGING)
+$ git merge js-assignments
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master|MERGING)
+$ git add README.txt
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master|MERGING)
+$ git commit -m "commited"
+[master 2c3b61a] commited
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ cat README.txt
+
+Printing this:
+Assignments contains all the css,HTML ang Java Script files.
+.HTML
+it is very important topic
+.CSS
+.JS
+......changes Made
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git merge js-assignments
+Already up to date.
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
+$ git --delete js-assignments
+unknown option: --delete
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+devamore@INLEN8520051089 MINGW64 ~/Assignments (master)
